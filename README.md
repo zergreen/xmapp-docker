@@ -6,6 +6,7 @@ ex is exercise of teacher <br>
 main file is index.php
 
 # Docker
+ในส่วนนี้เราจะมาทำการ รัน ตัว Project เราด้วย docker กัน ซึ่งวิธีนี้จะทำให้เรา สามารถทำ ตัว container ที่ได้จากการทำ docker ไปรันที่ไหน ก็ได้ที่มี docker ให้รัน
 1. สร้าง image ด้วย docker build (ดูได้จาก Dockerfile นะ)
 ```
 docker build -t xampp-v2 .
