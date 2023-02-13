@@ -1,0 +1,4 @@
+<?php
+$url = "index.html";
+header("Location: http://$url");
+?>

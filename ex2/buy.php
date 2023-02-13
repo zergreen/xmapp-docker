@@ -1,0 +1,1 @@
+<form action="buy-logic.php" action="post"></form>

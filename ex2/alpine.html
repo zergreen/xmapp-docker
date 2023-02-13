@@ -1,0 +1,48 @@
+<div>
+    <div x-data="{ count: 0 }">
+        <button x-on:click="count++">Increment</button>
+     
+        <span x-text="count"></span>
+    </div>
+    
+    <div x-data="{ open: false }">
+        <button @click="open = ! open">Toggle</button>
+     
+        <div x-show="open" @click.outside="open = false">Contents...</div>
+    </div>
+    
+    <script>
+    function calc() {
+      return {
+        total: 0,
+        total_amount: '',
+        shipping_amount: '',
+        tax_rate: '',
+        
+        getTotalAmount() {
+          return (this.total_amount === "") ? 0 : parseFloat(this.total_amount);
+        },
+        
+        getShippingAmount() {
+          return (this.shipping_amount === "") ? 0 : parseFloat(this.shipping_amount);
+        },
+        
+        getTaxRate() {
+          return (this.tax_rate === "") ? 0 : parseFloat(this.tax_rate);
+        },
+        
+        update_total() { 
+          this.total = ((this.getTotalAmount() + this.getShippingAmount() ) * ( 1 + (this.getTaxRate()  / 100))).toFixed(2); 
+       }
+      }
+    }
+    </script>
+    
+    <div x-data="calc()">
+        <input x-model="total_amount" @input="update_total"  id="total_amount" type="text" placeholder="10.99" class="shadow-outline text-grey-900">
+        <input x-model="shipping_amount" @input="update_total" id="shipping_amount" type="text" placeholder="4.95" class="shadow-outline text-grey-900">
+        <input x-model="tax_rate" @input="update_total" id="tax_rate" type="text" placeholder="8.0" class="shadow-outline text-grey-900">
+        <p x-text="total"></p>
+      </div>
+        
+    </div>

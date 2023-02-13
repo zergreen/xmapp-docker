@@ -1,0 +1,41 @@
+div {
+    /* border-style: none;
+    border-color: black; */
+
+    /* margin: 1%; */
+}
+
+span {
+    display: inline-block;
+    margin-left: 40px;
+}
+
+#form1 {
+   margin: 1% 1% 5% 1%;
+
+   border-style: none;
+   /* border-color: green; */
+}
+
+.box-black {
+    border-style: solid;
+    border-color: black;
+}
+
+#sign {
+    /* color: blue;
+    background-color: aqua; */
+}
+
+div #logo {
+    text-align: center;
+}
+#logo img {
+    width:15%;
+}
+
+.mybackground {
+    /* background: rgb(238,174,202); */
+    /* background: radial-gradient(circle, rgba(238,174,202,1) 0%, rgba(148,187,233,1) 100%); */
+    background-image: linear-gradient(90deg, #020024 0%, #090979 35%, #00d4ff 100%);
+}
